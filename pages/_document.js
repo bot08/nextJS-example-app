@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import SelectTheme from '../components/SelectTheme.jsx'
 
 class MyDocument extends Document {
   render() {
@@ -7,9 +8,12 @@ class MyDocument extends Document {
         <Head>
           
         </Head>
-        <body>
-          <Main />
-          <NextScript />
+        <body className="min-h-screen bg-gray-100 dark:bg-gray-800 transition-colors">
+          <main className="container mx-auto">
+            <SelectTheme/>
+            <Main/>
+            <NextScript />
+          </main>
         </body>
       </Html>
     )
