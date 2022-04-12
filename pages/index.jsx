@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Home = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen bg-white dark:bg-gray-900 flex-col items-center justify-center py-2">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,7 +19,7 @@ const Home = () => {
 
         <p className="mt-3 text-2xl">
           Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
+          <code className="rounded-md bg-gray-100 dark:bg-gray-800 p-3 font-mono text-lg">
             pages/index.tsx
           </code>
         </p>
