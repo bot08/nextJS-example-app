@@ -4,7 +4,7 @@ import SelectTheme from '../components/SelectTheme.jsx'
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="">
+      <Html lang="en">
         <Head>
           
         </Head>
