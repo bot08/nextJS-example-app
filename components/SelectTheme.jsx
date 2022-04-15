@@ -1,17 +1,10 @@
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 
+// Code below unsafe, see:
+// https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
-
-  // When mounted on client, now we can show the UI
-  // https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch
-  useEffect(() => setMounted(true), [])
-  
-  // uncomment the code below (theme dont work)
-  //if (!mounted) return null
 
   return (
     <>
