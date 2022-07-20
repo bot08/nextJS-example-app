@@ -18,6 +18,10 @@ const Home = () => {
       <Link href="/about">
         <a className="text-xl font-bold text-green-700 dark:text-green-200 my-2">About page</a>
       </Link>
+      <br/>
+      <Link href="/fetch">
+        <a className="text-xl font-bold text-green-700 dark:text-green-200 my-2">API fetch page</a>
+      </Link>
       <hr className="my-2 border-gray-300 dark:border-gray-500"/>
       <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-200 my-2">
         { counter }

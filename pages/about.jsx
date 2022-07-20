@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const About = () => {
   return (
@@ -18,6 +19,15 @@ const About = () => {
       <a target="_blank" href="https://github.com/bot08/nextJS-example-app" className="block text-xl font-bold text-green-700 dark:text-green-200 my-2">
         Github
       </a>
+
+      {/* See next.config to set domain */}
+      <Image
+        //placeholder="blur" (does not work)
+        src="/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg"
+        alt="Picture of the author"
+        width={1600}
+        height={1067}
+      />
     </>
   )
 }
