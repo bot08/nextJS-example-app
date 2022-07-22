@@ -18,7 +18,7 @@ const Fetch = () => {
     <>
       <Head>
         <title>NextJS example</title>
-        <link rel="icon" href="/favicon.ico" />
+        {/* todo: fix warn */}
         <link rel="preload" href="https://api-genshin.herokuapp.com/api/characters" as="fetch" crossorigin="anonymous"/>
       </Head>
  
