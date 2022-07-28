@@ -18,8 +18,8 @@ const Fetch = () => {
     <>
       <Head>
         <title>NextJS example</title>
-        {/* todo: fix warn */}
-        <link rel="preload" href="https://api-genshin.herokuapp.com/api/characters" as="fetch" crossorigin="anonymous"/>
+        {/* todo: fix preload (https://swr.vercel.app/docs/prefetching) */}
+        <link rel="prefetch" href="https://api-genshin.herokuapp.com/api/characters" as="fetch" crossorigin="anonymous"/>
       </Head>
  
       {

@@ -19,14 +19,17 @@ const About = () => {
         Github
       </a>
 
-      {/* See next.config to set domain */}
-      <Image
-        //placeholder="blur" (does not work)
-        src="/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg"
-        alt="Picture of the author"
-        width={1600}
-        height={1067}
-      />
+      <div className="w-72 sm:w-1/2 m-auto mt-4">
+        {/* See next.config to set domain */}
+        <Image
+          //placeholder="blur" (does not work)
+          src="/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg"
+          alt="Picture of the author"
+          width={1600}
+          height={1067}
+          className="rounded-xl"
+        />
+      </div>
     </>
   )
 }
