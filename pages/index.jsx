@@ -9,6 +9,8 @@ const Home = () => {
     <>
       <Head>
         <title>NextJS example</title>
+        {/* preload request for fetch page */}
+        <link rel="prefetch" href="https://api-genshin.herokuapp.com/api/characters" as="fetch" crossOrigin="anonymous"/>
       </Head>
       <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-200 my-2">
         Hello world <br/>
