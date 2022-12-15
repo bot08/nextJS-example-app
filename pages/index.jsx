@@ -10,18 +10,17 @@ const Home = () => {
       <Head>
         <title>NextJS example</title>
         {/* preload request for fetch page */}
-        <link rel="prefetch" href="https://api-genshin.herokuapp.com/api/characters" as="fetch" crossOrigin="anonymous"/>
       </Head>
       <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-200 my-2">
         Hello world <br/>
         This is NextJS
       </h1>
-      <Link href="/about">
-        <a className="text-xl font-bold text-green-700 dark:text-green-200 my-2">About page</a>
+      <Link href="/about" className="text-xl font-bold text-green-700 dark:text-green-200 my-2">
+        About page
       </Link>
       <br/>
-      <Link href="/fetch">
-        <a className="text-xl font-bold text-green-700 dark:text-green-200 my-2">API fetch page</a>
+      <Link href="/fetch" className="text-xl font-bold text-green-700 dark:text-green-200 my-2">
+        API fetch page
       </Link>
       <hr className="my-2 border-gray-300 dark:border-gray-500"/>
       <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-200 my-2">

@@ -7,31 +7,30 @@ import useSWR from "swr"
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const Fetch = () => {
-  const { data, error } = useSWR(
-    "https://api-genshin.herokuapp.com/api/characters",
+  const { data, error, isLoading } = useSWR(
+    "https://sushicat.pp.ua/api/genshin/api/collections/get/charactersv2?sort[_id]=-1&fields[name]=1&fields[nameeng]=1&fields[rarity]=1&fields[ico]=1&token=a4191046104f8f3674f788e804c2d0",
     fetcher
   );
   if (error) return "An error has occurred.";
-  if (!data) return "Loading...";
+  if (isLoading) return "Loading...";
 
   return (
     <>
       <Head>
         <title>NextJS example</title>
         {/* todo: fix preload (https://swr.vercel.app/docs/prefetching) */}
-        <link rel="prefetch" href="https://api-genshin.herokuapp.com/api/characters" as="fetch" crossOrigin="anonymous"/>
       </Head>
  
       {
-        data.map(({ name, rarity }) => (
+        data.entries.map(({ name, rarity }) => (
           <div key={name.toString()}>
             { name } { rarity }
           </div>
         ))
       }
 
-      <Link href="/">
-        <a className="text-xl font-bold text-green-700 dark:text-green-200 my-2">Home page</a>
+      <Link href="/" className="text-xl font-bold text-green-700 dark:text-green-200 my-2">
+        Home page
       </Link>
     </>
   )
